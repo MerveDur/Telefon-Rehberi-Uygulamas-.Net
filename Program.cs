@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Collections;
-#nullable disable // Strin null olabilir uyarısı engelleme
+#nullable disable // String null olabilir uyarısı engelleme
 
 namespace HelloWorld
 {
@@ -273,7 +273,6 @@ namespace HelloWorld
             int selection=0;
             telefonRehberi rehberim=new telefonRehberi();
 
-            
             while(selection!=6)
             {
                 menu.getMenu();
