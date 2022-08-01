@@ -2,7 +2,6 @@
 using System.Collections;
 #nullable disable // Strin null olabilir uyarısı engelleme
 
-
 namespace HelloWorld
 {
     class Menu
@@ -35,7 +34,6 @@ namespace HelloWorld
             isim=ad;
             soyisim=soyad;
             telefonNumber=num;
-
         }
     public string getIsim() {
             return this.isim;
@@ -48,7 +46,6 @@ namespace HelloWorld
         public string getSoyisim() {
             return this.soyisim;
         }
-
         public void setSoyisim(string soyisim) {
             this.soyisim = soyisim;
         }
@@ -56,11 +53,9 @@ namespace HelloWorld
         public string getTelefonNumber() {
             return this.telefonNumber;
         }
-
         public void setTelefonNumber(string telefonNumber) {
             this.telefonNumber = telefonNumber;
         }
-            
     }
     class telefonRehberi
     {
@@ -80,18 +75,14 @@ namespace HelloWorld
             rehber.Add(k4);
             rehber.Add(k5);
         }
-
         public List<kisi> GetRehber()
         {
             return this.rehber;
         }
-
         public void setRehber(List<kisi> rehber)
         {
             this.rehber = rehber;
         }
-
-
         public void numaraKAydet()
         {
             string tempİsim,tempSoyisim,num;
@@ -107,11 +98,9 @@ namespace HelloWorld
                 rehber.Add(k);
                 Console.WriteLine(tempİsim+" İsimli kişi kaydedildi ...");
                 Console.WriteLine("Tekrar seçim yapınız! ");
-
             }
             else
                 Console.WriteLine("Kişi kaydedilemedi tekrar deneyiniz ! ");
-
         }
         public void numaraSil()
         {
@@ -122,7 +111,6 @@ namespace HelloWorld
             tempİsim=Console.ReadLine();
             for(int i=0;i<rehber.Count;i++)
             {
-
                 if(GetRehber()[i].getIsim()==tempİsim || GetRehber()[i].getSoyisim()==tempİsim)
                 {
                     Console.Write(tempİsim+" isimli kişi rehberden silinmek üzere, onaylıyor musunuz ?(y/n)");
@@ -134,7 +122,6 @@ namespace HelloWorld
                         Console.WriteLine("Silme işlemi gerçekleştirildi tekrar seçim yapınız! ");
                     }
                     find=1;
-                    
                 }
             }
             if(find==0)
@@ -163,9 +150,6 @@ namespace HelloWorld
                         Console.WriteLine("Hatalı giriş yaptınız tekrar ddeneyin! ");
                     }
                 }
-                
-
-
             }
         }
         public void numaraGüncelle()
@@ -190,8 +174,7 @@ namespace HelloWorld
                         Console.WriteLine("Güncelleme işlemi gerçekleştirildi tekrar seçim yapınız! ");
 
                     }
-                    find=1;
-                    
+                    find=1;  
                 }
             }
             if(find==0)
@@ -295,33 +278,30 @@ namespace HelloWorld
             {
                 menu.getMenu();
                 selection=Convert.ToInt32(Console.ReadLine());
-            switch (selection)
-            {
-                case 1:
-                    rehberim.numaraKAydet();
-                    break;
-                case 2:
-                    rehberim.numaraSil();
-                    break;
-                case 3:
-                    rehberim.numaraGüncelle();
-                    break;
-                case 4:
-                     rehberim.rehberiListele();
-                    break;
-                case 5:
-                    rehberim.numaraAra();
-                    break;  
-                case 6:
-                    break;  
-                default :
-                    Console.WriteLine("Try Again!");
-                    break;
-            }
-            
-            }
-            
+                switch (selection)
+                {
+                    case 1:
+                        rehberim.numaraKAydet();
+                        break;
+                    case 2:
+                        rehberim.numaraSil();
+                        break;
+                    case 3:
+                        rehberim.numaraGüncelle();
+                        break;
+                    case 4:
+                        rehberim.rehberiListele();
+                        break;
+                    case 5:
+                        rehberim.numaraAra();
+                        break;  
+                    case 6:
+                        break;  
+                    default :
+                        Console.WriteLine("Try Again!");
+                        break;
+                }
+            }       
         }
     }
-
 }
