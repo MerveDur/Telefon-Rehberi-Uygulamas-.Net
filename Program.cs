@@ -35,7 +35,7 @@ namespace HelloWorld
             soyisim=soyad;
             telefonNumber=num;
         }
-    public string getIsim() {
+        public string getIsim() {
             return this.isim;
         }
 
